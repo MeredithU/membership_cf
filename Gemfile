@@ -20,6 +20,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test do
+  gem 'email_spec', '1.2.1'
+end
+
 gem 'jquery-rails'
 gem 'devise', '2.1.0'
 
