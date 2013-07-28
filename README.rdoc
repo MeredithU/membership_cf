@@ -1,0 +1,9 @@
+== Code Fellows App Assignment
+
+Purpose of app is to use the has_many: through association.
+
+Overall Objective: Gym Membership
+Models: User, Fitness Class
+Join Model: Membership
+
+Used scaffolding.
