@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728204140) do
+ActiveRecord::Schema.define(:version => 20130731061451) do
 
   create_table "fitnessclasses", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "title"
-    t.string   "type"
     t.string   "level"
     t.datetime "startdate"
     t.datetime "enddate"

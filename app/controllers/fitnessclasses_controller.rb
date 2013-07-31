@@ -4,6 +4,10 @@ class FitnessclassesController < ApplicationController
   def index
     @fitnessclasses = Fitnessclass.all
 
+    @past_fitnessclasses = Fitnessclass.where('startdate < ?', Date.today)
+    @upcoming_fitnessclasses = Fitnessclass.where('startdate > ?', Date.today).order("startdate")
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fitnessclasses }

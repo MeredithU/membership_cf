@@ -1,14 +1,22 @@
-<h1>Listing fitnessclasses</h1>
+<h2>Upcoming Fitness Classes</h2>
 
 <table>
   <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Start Date</th>
+    <th>End Date</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @fitnessclasses.each do |fitnessclass| %>
+<% @upcoming_fitnessclasses.each do |fitnessclass| %>
   <tr>
+    <td><%= fitnessclass.title %></td>
+    <td><%= fitnessclass.level %></td>
+    <td><%= fitnessclass.startdate.strftime('%B %d, %Y') %></td>
+    <td><%= fitnessclass.enddate.strftime('%B %d, %Y') %></td>
     <td><%= link_to 'Show', fitnessclass %></td>
     <td><%= link_to 'Edit', edit_fitnessclass_path(fitnessclass) %></td>
     <td><%= link_to 'Destroy', fitnessclass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -18,4 +26,32 @@
 
 <br />
 
-<%= link_to 'New Fitnessclass', new_fitnessclass_path %>
+<%= link_to 'New Fitness Class', new_fitnessclass_path %>
+
+<br /><br /><br />
+
+<h2>Past Fitness Classes</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @past_fitnessclasses.each do |fitnessclass| %>
+  <tr>
+    <td><%= fitnessclass.title %></td>
+    <td><%= fitnessclass.level %></td>
+    <td><%= fitnessclass.startdate.strftime('%B %d, %Y') %></td>
+    <td><%= fitnessclass.enddate.strftime('%B %d, %Y') %></td>
+    <td><%= link_to 'Show', fitnessclass %></td>
+    <td><%= link_to 'Edit', edit_fitnessclass_path(fitnessclass) %></td>
+    <td><%= link_to 'Destroy', fitnessclass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
