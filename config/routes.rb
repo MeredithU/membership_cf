@@ -5,6 +5,7 @@ GymMembership::Application.routes.draw do
   root :to => "fitnessclasses#index"
 
   resources :fitnessclasses
+  resources :memberships
 
 
   # The priority is based upon order of creation:

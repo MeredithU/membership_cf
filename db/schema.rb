@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731061451) do
+ActiveRecord::Schema.define(:version => 20130731214402) do
 
   create_table "fitnessclasses", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "title"
     t.string   "level"
     t.datetime "startdate"
     t.datetime "enddate"
+    t.integer  "membership_id"
   end
 
   create_table "memberships", :force => true do |t|
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20130731061451) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.integer  "membership_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

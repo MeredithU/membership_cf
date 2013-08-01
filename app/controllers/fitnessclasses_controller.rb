@@ -1,6 +1,7 @@
 class FitnessclassesController < ApplicationController
   # GET /fitnessclasses
   # GET /fitnessclasses.json
+
   def index
     @fitnessclasses = Fitnessclass.all
 
@@ -84,4 +85,5 @@ class FitnessclassesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
